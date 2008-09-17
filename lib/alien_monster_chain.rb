@@ -2,6 +2,22 @@ require 'rubygems' unless defined?(Gem)
 require 'rebound'
 
 class Module
+  # Totally irresponsible variation on alias_method_chain.
+  #
+  # USAGE
+  #
+  # class Klass
+  #   def foo
+  #     :foo
+  #   end
+  # end
+  #
+  # Klass.alien_monster_chain :foo do
+  #   [super, :bar]
+  # end
+  #
+  # Klass.new.foo # => [:foo, :bar]
+  #
   def alien_monster_chain(target, monster=nil, &block)
     return unless block_given?
     original = instance_method(target)
