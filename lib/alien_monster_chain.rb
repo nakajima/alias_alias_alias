@@ -17,7 +17,6 @@ class Module
   # end
   #
   # Klass.new.foo # => [:foo, :bar]
-  #
   def alien_monster_chain(target, monster=nil, &block)
     return unless block_given?
     original = instance_method(target)
