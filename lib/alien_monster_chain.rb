@@ -22,7 +22,7 @@ class Module
     return unless block_given?
     original = instance_method(target)
     define_method("#{target}_without_#{monster}", original) if monster
-    include Module.new { eval(original.to_s(:ruby)) }
+    include Module.new { module_eval(original.to_s(:ruby)) }
     define_method(target, &block)
   end
 end
