@@ -16,6 +16,12 @@ class Module
   #   [super, :bar]
   # end
   #
+  # or
+  # 
+  # Klass.alien_monster_chain :foo, :ufo do
+  #   [foo_without_ufo, :bar]
+  # end
+  #
   # Klass.new.foo # => [:foo, :bar]
   def alien_monster_chain(target, monster=nil, &block)
     return unless block_given?
