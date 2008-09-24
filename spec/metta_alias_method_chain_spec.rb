@@ -49,8 +49,8 @@ describe "alias_method_chain is already defined" do
     
     @klass.new.foo.should == [:foo, :bar]
   end
-
+  
   after(:all) do
-    Module.send :undef_method, :alias_method_chain
+    require 'active_support'
   end
 end

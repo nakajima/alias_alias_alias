@@ -1,1 +1,6 @@
 ALIAS ALIAS ALIAS!!!11!!!1 - THE PATS MADDOX & NAKAJIMA
+
+NOTE: none of these things handle cases where the method
+you're aliasing ends with (?|!), so that's something you'll
+have to deal with in the event you try to use these hacks,
+which by the way, you never should. - patn 
